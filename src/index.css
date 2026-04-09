@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-cyber-bg: #F8FAFC;
+  --color-cyber-card: #FFFFFF;
+  --color-cyber-accent: #FF5A00;
+  --color-cyber-accent-secondary: #FF8A00;
+  --color-cyber-danger: #EF4444;
+  --color-cyber-success: #22C55E;
+  --color-cyber-warning: #F59E0B;
+  --color-cyber-base: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-cyber-bg)] text-slate-800 font-sans;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-xl border border-slate-200/50 rounded-2xl;
+}
+
+.neon-glow {
+  box-shadow: 0 0 25px rgba(255, 90, 0, 0.4);
+}
+
+.orb-glow {
+  box-shadow: 0 0 50px 20px rgba(255, 90, 0, 0.3), inset 0 0 20px rgba(255, 90, 0, 0.5);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 138, 0, 0.8), rgba(0, 0, 0, 0.9));
+}
+
+.vertical-bar {
+  background: linear-gradient(to top, rgba(255, 90, 0, 0.6) 0%, rgba(255, 90, 0, 0) 60%);
+}
+
+.connection-dot {
+  @apply w-2 h-2 rounded-full bg-cyber-accent shadow-[0_0_10px_#FF5A00];
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}

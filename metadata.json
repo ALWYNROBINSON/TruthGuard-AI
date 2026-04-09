@@ -1,0 +1,8 @@
+{
+  "name": "TruthGuard AI",
+  "description": "Transparent, explainable, multi-modal deepfake detection system with forensic reporting.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
